@@ -4,9 +4,8 @@
 
 1. Download the image from source [example curiosity image](https://www.youtube.com/redirect?redir_token=dfA4GMEeU4k3BJnXCxl-UJDD0bV8MTU4NTcyOTA4MUAxNTg1NjQyNjgx&q=https%3A%2F%2Fmars.nasa.gov%2Fresources%2F24801%2Fcuriositys-18-billion-pixel-panorama%2F%3Fsite%3Dmsl&v=Ri2_X28t9lE&event=video_description)
 2. clone or download this repository
-
-		`git clone https://github.com/rigvedepur/hiresimage-movie-creator.git`
-		`cd hiresimage-movie-creator`
+	* git clone this [repo](https://github.com/rigvedepur/hiresimage-movie-creator.git)
+	* `cd hiresimage-movie-creator`
 
 
 3. Create a virtual environment of python3 and install dependencies
