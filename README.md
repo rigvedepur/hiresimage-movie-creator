@@ -12,7 +12,7 @@
 	`pip install -r requirements.txt`
 
 ##### Available flags
-```python
+```
 -i --input : input filename that links to the downloaded Images
 
 -r --resolution : output resolution
@@ -29,7 +29,7 @@
 
 ##### How to execute the script (Example)
 ```python
-`python create_movie.py data/PIA23623_M34.tif -r 4K -s 5 -f 30 -c MP4V`
+python create_movie.py data/PIA23623_M34.tif -r 4K -s 5 -f 30 -c MP4V`
 ```
 #### Sample video generated from above arguments
 
