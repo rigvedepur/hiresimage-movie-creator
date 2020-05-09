@@ -20,19 +20,19 @@ image = imread(filename)
 # Assign output screen resolution
 resolution = args['resolution']
 if resolution == '4K':
-    size = (3840, 2160)
+	size = (3840, 2160)
 elif resolution == '1080p':
-    size = (1920, 1080)
+	size = (1920, 1080)
 elif resolution == '720p':
-    size = (1280, 720)
+	size = (1280, 720)
 elif resolution == '480p':
-    size = (854, 480)
+	size = (854, 480)
 elif resolution == '360p':
-    size = (640, 360)
+	size = (640, 360)
 elif resolution == '240p':
-    size = (426, 240)
+	size = (426, 240)
 else:
-    size = (1920, 1080)
+	size = (3840, 2160)
 
 (screen_width, screen_height) = size
 
@@ -46,9 +46,9 @@ step = int(args['step'])
 # Read format of output file-extension (.avi or .mp4)
 codec = args['codec']
 if codec == 'DIVX':
-    file_ext = '.avi'
+	file_ext = '.avi'
 elif codec == 'MP4V':
-    file_ext = '.mp4'
+	file_ext = '.mp4'
 
 
 # Define output filename
@@ -64,17 +64,15 @@ bar = IncrementalBar('Progress: ', max=total_frames)
 
 for j in [k*screen_height for k in range(image_height//screen_height)]:
 
-    for i in [f*step for f in range(image_width//step)]:
+	for i in [f*step for f in range(image_width//step)]:
 
-        crop = image[j:j+screen_height, i:i+screen_width, :]
-        crop = cv2.cvtColor(crop, cv2.COLOR_RGB2BGR)
-        out.write(crop)
-        bar.next()
+		crop = image[j:j+screen_height, i:i+screen_width, :]
+		crop = cv2.cvtColor(crop, cv2.COLOR_RGB2BGR)
+		out.write(crop)
+		bar.next()
 
 
 out.release()
 bar.finish()
 
 print('Movie saved successfully')
-
-
